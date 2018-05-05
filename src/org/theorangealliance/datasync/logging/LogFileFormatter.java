@@ -8,7 +8,7 @@ import java.util.logging.LogRecord;
 /**
  * Created by Kyle Flynn on 12/3/2017.
  */
-public class LogFileFormatter extends Formatter {
+class LogFileFormatter extends Formatter {
     @Override
     public String format(LogRecord record) {
         Date date = new Date();

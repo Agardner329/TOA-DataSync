@@ -8,100 +8,100 @@ import com.google.gson.annotations.SerializedName;
 public class MatchDetailRelicJSON {
 
     @SerializedName("match_detail_key")
-    String matchDtlKey;
+    private String matchDtlKey;
 
     @SerializedName("match_key")
-    String matchKey;
+    private String matchKey;
 
     @SerializedName("red_auto_jewel")
-    int redAutoJewel;
+    private int redAutoJewel;
 
     @SerializedName("red_auto_glyphs")
-    int redAutoGlyphs;
+    private int redAutoGlyphs;
 
     @SerializedName("red_auto_keys")
-    int redAutoKeys;
+    private int redAutoKeys;
 
     @SerializedName("red_auto_park")
-    int redAutoPark;
+    private int redAutoPark;
 
     @SerializedName("red_tele_glyphs")
-    int redTeleGlyphs;
+    private int redTeleGlyphs;
 
     @SerializedName("red_tele_rows")
-    int redTeleRows;
+    private int redTeleRows;
 
     @SerializedName("red_tele_columns")
-    int redTeleColumns;
+    private int redTeleColumns;
 
     @SerializedName("red_tele_cypher")
-    int redTeleCypher;
+    private int redTeleCypher;
 
     @SerializedName("red_end_relic_1")
-    int redEndRelic1;
+    private int redEndRelic1;
 
     @SerializedName("red_end_relic_2")
-    int redEndRelic2;
+    private int redEndRelic2;
 
     @SerializedName("red_end_relic_3")
-    int redEndRelic3;
+    private int redEndRelic3;
 
     @SerializedName("red_end_relic_up")
-    int redEndRelicUp;
+    private int redEndRelicUp;
 
     @SerializedName("red_end_robot_bal")
-    int redEndRobotBal;
+    private int redEndRobotBal;
 
     @SerializedName("red_min_pen")
-    int redMinPen;
+    private int redMinPen;
 
     @SerializedName("red_maj_pen")
-    int redMajPen;
+    private int redMajPen;
 
     @SerializedName("blue_auto_jewel")
-    int blueAutoJewel;
+    private int blueAutoJewel;
 
     @SerializedName("blue_auto_glyphs")
-    int blueAutoGlyphs;
+    private int blueAutoGlyphs;
 
     @SerializedName("blue_auto_keys")
-    int blueAutoKeys;
+    private int blueAutoKeys;
 
     @SerializedName("blue_auto_park")
-    int blueAutoPark;
+    private int blueAutoPark;
 
     @SerializedName("blue_tele_glyphs")
-    int blueTeleGlyphs;
+    private int blueTeleGlyphs;
 
     @SerializedName("blue_tele_rows")
-    int blueTeleRows;
+    private int blueTeleRows;
 
     @SerializedName("blue_tele_columns")
-    int blueTeleColumns;
+    private int blueTeleColumns;
 
     @SerializedName("blue_tele_cypher")
-    int blueTeleCypher;
+    private int blueTeleCypher;
 
     @SerializedName("blue_end_relic_1")
-    int blueEndRelic1;
+    private int blueEndRelic1;
 
     @SerializedName("blue_end_relic_2")
-    int blueEndRelic2;
+    private int blueEndRelic2;
 
     @SerializedName("blue_end_relic_3")
-    int blueEndRelic3;
+    private int blueEndRelic3;
 
     @SerializedName("blue_end_relic_up")
-    int blueEndRelicUp;
+    private int blueEndRelicUp;
 
     @SerializedName("blue_end_robot_bal")
-    int blueEndRobotBal;
+    private int blueEndRobotBal;
 
     @SerializedName("blue_min_pen")
-    int blueMinPen;
+    private int blueMinPen;
 
     @SerializedName("blue_maj_pen")
-    int blueMajPen;
+    private int blueMajPen;
 
     public String getMatchDtlKey() {
         return matchDtlKey;

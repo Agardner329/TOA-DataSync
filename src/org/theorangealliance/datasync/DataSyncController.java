@@ -248,8 +248,8 @@ public class DataSyncController implements Initializable {
 
                 try {
                     BufferedReader reader = new BufferedReader(new FileReader(divisionsFile));
+                    reader.readLine();
                     String line = reader.readLine();
-                    line = reader.readLine();
                     Config.EVENT_NAME = line;
                     while ((line = reader.readLine()) != null) {
                         if (line.split("\\|").length > 3) {
@@ -351,23 +351,19 @@ public class DataSyncController implements Initializable {
     @FXML
     public void startAutoSync() {
         DataSync.getMainStage().setOnCloseRequest(closeEvent -> this.syncController.kill());
-        this.syncController.execute((count) -> {
-            Platform.runLater(() -> {
-                Date date = new Date();
-                TOALogger.log(Level.INFO, "Executing update #" + count + " at " + DateFormat.getTimeInstance(DateFormat.SHORT).format(date));
-                TOALogger.log(Level.INFO, "There are " + Thread.activeCount() + " threads.");
-                this.matchesController.syncMatches();
-                this.matchesController.checkMatchSchedule();
-                this.matchesController.checkMatchDetails();
-//                this.rankingsController.syncRankings();
-                // We're going to try THIS instead....
-                this.rankingsController.getRankingsByFile();
-                this.rankingsController.postRankings();
-                if (this.btnSyncMatches.selectedProperty().get()) {
-                     this.matchesController.postCompletedMatches();
-                }
-            });
-        });
+        this.syncController.execute((count) -> Platform.runLater(() -> {
+            Date date = new Date();
+            TOALogger.log(Level.INFO, "Executing update #" + count + " at " + DateFormat.getTimeInstance(DateFormat.SHORT).format(date));
+            TOALogger.log(Level.INFO, "There are " + Thread.activeCount() + " threads.");
+            this.matchesController.syncMatches();
+            this.matchesController.checkMatchSchedule();
+            this.matchesController.checkMatchDetails();
+            this.rankingsController.getRankingsByFile();
+            this.rankingsController.postRankings();
+            if (this.btnSyncMatches.selectedProperty().get()) {
+                 this.matchesController.postCompletedMatches();
+            }
+        }));
     }
 
     @FXML

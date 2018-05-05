@@ -1,9 +1,6 @@
 package org.theorangealliance.datasync.json;
 
 import com.google.gson.annotations.SerializedName;
-import javafx.beans.property.SimpleBooleanProperty;
-import javafx.beans.property.SimpleStringProperty;
-
 import java.util.Date;
 
 /**

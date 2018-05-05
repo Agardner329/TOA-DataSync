@@ -4,7 +4,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ButtonType;
 import org.theorangealliance.datasync.DataSyncController;
-import org.theorangealliance.datasync.util.Config;
 
 import java.util.Optional;
 import java.util.concurrent.Executors;

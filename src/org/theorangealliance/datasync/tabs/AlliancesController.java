@@ -32,7 +32,7 @@ public class AlliancesController {
                 String line;
                 alliances = new Alliance[4];
                 while ((line = reader.readLine()) != null) {
-                    /** Alliance info */
+                    /* Alliance info */
                     String[] allianceInfo = line.split("\\|");
                     int division = Integer.parseInt(allianceInfo[0]);
                     int allianceNumber = Integer.parseInt(allianceInfo[1]);

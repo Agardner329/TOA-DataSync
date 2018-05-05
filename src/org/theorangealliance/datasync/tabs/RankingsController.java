@@ -19,9 +19,7 @@ import org.theorangealliance.datasync.util.TOAEndpoint;
 import org.theorangealliance.datasync.util.TOARequestBody;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Iterator;
 import java.util.Optional;
 import java.util.logging.Level;
 

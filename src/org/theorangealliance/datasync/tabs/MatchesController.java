@@ -394,7 +394,7 @@ public class MatchesController {
                 String line;
                 int elimCount = 0;
                 while ((line = reader.readLine()) != null) {
-                    /** MATCH info */
+                    /* MATCH info */
                     String[] matchInfo = line.split("\\|\\|")[0].split("\\|");
                     int tournamentLevel = Integer.parseInt(matchInfo[1]);
                     int matchNumber = Integer.parseInt(matchInfo[2]);
@@ -415,7 +415,7 @@ public class MatchesController {
                         match.setMatchKey(Config.EVENT_ID + "-" + qualChar + String.format("%03d", match.getCanonicalMatchNumber()) + "-1");
                     }
 
-                    /** TEAM info */
+                    /* TEAM info */
                     String[] teamInfo = line.split("\\|\\|")[1].split("\\|");
                     ScheduleStation[] scheduleStations = new ScheduleStation[6];
                     scheduleStations[0] = new ScheduleStation(match.getMatchKey(), 11, Integer.parseInt(teamInfo[0]));

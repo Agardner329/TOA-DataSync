@@ -11,10 +11,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
 import java.net.URL;
-import java.util.List;
 import java.util.logging.Level;
 
 /**
@@ -22,8 +19,8 @@ import java.util.logging.Level;
  */
 public class TOAEndpoint implements Runnable {
 
-    private final String BASE_URL = "https://theorangealliance.org/apiv2/";
-//    private final String BASE_URL = "http://localhost:8080/apiv2/";
+    private static final String BASE_URL = "https://theorangealliance.org/apiv2/";
+//    private static final String BASE_URL = "http://localhost:8080/apiv2/";
     private String endpoint;
     private String requestType;
     private String apiKey;
