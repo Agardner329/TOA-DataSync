@@ -124,6 +124,27 @@ public class DataSyncController implements Initializable {
 
     /* This is for our awards tab */
     @FXML public Tab tabAwards;
+    @FXML public Label labelWinnerNumber;
+    @FXML public Label labelSecondPlaceNumber;
+    @FXML public Label labelThirdPlaceNumber;
+    @FXML public Label labelWinnerName;
+    @FXML public Label labelSecondPlaceName;
+    @FXML public Label labelThirdPlaceName;
+    @FXML public Label labelAwardDescription;
+    @FXML public Label labelAwardComments;
+    @FXML public ToggleGroup awardsGroup;
+    @FXML public RadioButton radioInspire;
+    @FXML public RadioButton radioThink;
+    @FXML public RadioButton radioConnect;
+    @FXML public RadioButton radioInnovate;
+    @FXML public RadioButton radioDesign;
+    @FXML public RadioButton radioMotivate;
+    @FXML public RadioButton radioControl;
+    @FXML public RadioButton radioJudges;
+    @FXML public RadioButton radioCompass;
+    @FXML public RadioButton radioPromote;
+    @FXML public RadioButton radioDeansFinal;
+    @FXML public RadioButton radioDeansSemi;
 
     /* This is for our advancement tab */
     @FXML public Tab tabAdvancement;
@@ -164,6 +185,8 @@ public class DataSyncController implements Initializable {
             enableAllWindows();
 
         }
+
+        //Add all the
 
         readSettings();
 

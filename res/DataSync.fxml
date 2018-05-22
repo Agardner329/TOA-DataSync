@@ -5,12 +5,14 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -19,8 +21,9 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.control.ToggleGroup?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.theorangealliance.datasync.DataSyncController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.theorangealliance.datasync.DataSyncController">
    <children>
       <TabPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="720.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.025" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <tabs>
@@ -479,9 +482,94 @@
                      </children></AnchorPane>
               </content>
             </Tab>
-            <Tab fx:id="tabAwards" disable="true" text="Awards">
+            <Tab fx:id="tabAwards" text="Awards">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                         <GridPane layoutX="10">
+                             <columnConstraints>
+                                 <ColumnConstraints hgrow="SOMETIMES" prefWidth="350" />
+                                 <ColumnConstraints hgrow="SOMETIMES" prefWidth="350" />
+                             </columnConstraints>
+                             <rowConstraints>
+                                 <RowConstraints prefHeight="150.0" vgrow="SOMETIMES" />
+                                 <RowConstraints prefHeight="230.0" vgrow="SOMETIMES" />
+                                 <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+                             </rowConstraints>
+                             <GridPane prefHeight="150.0" prefWidth="350.0">
+                                 <columnConstraints>
+                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.0" minWidth="116.0" prefWidth="116.0" />
+                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.0" minWidth="116.0" prefWidth="116.0" />
+                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.0" minWidth="116.0" prefWidth="116.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                     <RowConstraints minHeight="36.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                                     <RowConstraints minHeight="36.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                                     <RowConstraints minHeight="36.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                                     <RowConstraints minHeight="36.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <fx:define>
+                                     <ToggleGroup fx:id="awardsGroup"/>
+                                 </fx:define>
+                                 <children>
+                                      <RadioButton toggleGroup="$awardsGroup" fx:id="radioInspire" mnemonicParsing="false" text="Inspire" />
+                                      <RadioButton toggleGroup="$awardsGroup" fx:id="radioThink" mnemonicParsing="false" text="Think" GridPane.rowIndex="1"/>
+                                      <RadioButton toggleGroup="$awardsGroup" fx:id="radioConnect" mnemonicParsing="false" text="Connect" GridPane.rowIndex="2"/>
+                                      <RadioButton toggleGroup="$awardsGroup" fx:id="radioInnovate" mnemonicParsing="false" text="Innovate" GridPane.rowIndex="3"/>
+                                      <RadioButton toggleGroup="$awardsGroup" fx:id="radioDesign" mnemonicParsing="false" text="Design" GridPane.columnIndex="1" />
+                                      <RadioButton toggleGroup="$awardsGroup" fx:id="radioMotivate" mnemonicParsing="false" text="Motivate" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                                      <RadioButton toggleGroup="$awardsGroup" fx:id="radioControl" mnemonicParsing="false" text="Control" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                                      <RadioButton toggleGroup="$awardsGroup" fx:id="radioJudges" mnemonicParsing="false" text="Judge's" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                                      <RadioButton toggleGroup="$awardsGroup" fx:id="radioCompass" mnemonicParsing="false" text="Compass" GridPane.columnIndex="2" />
+                                      <RadioButton toggleGroup="$awardsGroup" fx:id="radioPromote" mnemonicParsing="false" text="Promote" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                                      <RadioButton toggleGroup="$awardsGroup" fx:id="radioDeansFinal" mnemonicParsing="false" text="Dean's Finalist" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                                      <RadioButton toggleGroup="$awardsGroup" fx:id="radioDeansSemi" mnemonicParsing="false" text="Dean's Semi" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+                                  </children>
+                             </GridPane>
+                             <GridPane prefHeight="77.0" prefWidth="350.0" GridPane.columnIndex="1">
+                                 <columnConstraints>
+                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="245.0" prefWidth="245.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                     <Label prefHeight="25.0" prefWidth="307.0" text="Winner:" />
+                                     <Label prefHeight="17.0" prefWidth="60.0" text="Finalist 1:" GridPane.rowIndex="1" />
+                                     <Label prefHeight="17.0" prefWidth="61.0" text="Finalist 2:" GridPane.rowIndex="2" />
+                                     <Label fx:id="labelWinnerNumber" prefHeight="17.0" prefWidth="92.0" text="Team #" GridPane.columnIndex="1" />
+                                     <Label fx:id="labelSecondPlaceNumber" prefHeight="17.0" prefWidth="92.0" text="Team #" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                     <Label fx:id="labelThirdPlaceNumber" prefHeight="17.0" prefWidth="92.0" text="Team #" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                     <Label fx:id="labelWinnerName" prefHeight="17.0" prefWidth="92.0" text="Team Name" GridPane.columnIndex="2" />
+                                     <Label fx:id="labelSecondPlaceName" prefHeight="17.0" prefWidth="92.0" text="Team Name" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                     <Label fx:id="labelThirdPlaceName" prefHeight="17.0" prefWidth="92.0" text="Team Name" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                 </children>
+                             </GridPane>
+                             <TitledPane animated="false" collapsible="false" prefHeight="225.0" prefWidth="330.0" text="Award Description" GridPane.rowIndex="1">
+                                 <content>
+                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                         <children>
+                                             <Label fx:id="labelAwardDescription" alignment="TOP_LEFT" layoutX="14.0" layoutY="14.0" prefHeight="175.0" prefWidth="300.0" text="Default Description" />
+                                         </children>
+                                     </AnchorPane>
+                                 </content>
+                             </TitledPane>
+                             <TitledPane animated="false" collapsible="false" layoutX="350.0" layoutY="108.0" prefHeight="225.0" prefWidth="330.0" text="Judge's Comments" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <content>
+                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                         <children>
+                                             <Label fx:id="labelAwardComments" alignment="TOP_LEFT" layoutX="14.0" layoutY="14.0" prefHeight="175.0" prefWidth="300.0" text="Default Comments" />
+                                         </children>
+                                     </AnchorPane>
+                                 </content>
+                             </TitledPane>
+                         </GridPane>
+                     </children>
+                </AnchorPane>
               </content>
             </Tab>
             <Tab fx:id="tabAdvancement" disable="true" text="Advancement">
